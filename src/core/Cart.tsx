@@ -23,7 +23,7 @@ function Cart() {
            <div className="row" style={{marginRight:"10%", marginLeft:"10%"}}>
                 {cartPrd.map((prd,index)=>{
                     return (
-                        <div key={index}  className="col-4 mx-auto my-3">
+                        <div key={index}  className="col-sm-12 col-md-6 col-lg-4 mx-auto my-3">
                             <ProductCard product={prd} addToCart={false} removeFromCart={true} removeProduct={removeProduct}/>
                         </div>
                     )   
@@ -58,10 +58,10 @@ function Cart() {
 
     return(
         <Base title="Cart Page" description="Lets checkout your favorite products">
-            <div className="row text-white border border-white border-1 mx-5">
+            <div className="row text-white border border-white border-1 mx-sm-3 mx-md-4 mx-lg-5">
                 <div className="col-12">
                     { (isAuthenticate()) ? (<div className="row">
-                        <div className="col-6 mx-auto text-center"><PaymentUI cartPrd={cartPrd} /></div>
+                        <div className="col-sm-10 col-md-8 col-lg-6 mx-auto text-center"><PaymentUI cartPrd={cartPrd} /></div>
                     </div>) : (<div className="text-center border border-white border-1 m-2">
                         <h3 className="text-white">Please Login First to Checkout</h3>
                         <Link to="/login"><span className="btn btn-warning mb-3"><b>Login</b></span></Link>

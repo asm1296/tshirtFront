@@ -50,42 +50,42 @@ const UserOrders:FC<paymentSuccess>=({match})=>{
             <div className="paymentSuccessContainer text-white">
                 {valid && (<>
                  <div className="row">
-                    <div className="col-8 mx-auto text-center rounded border my-2">
+                    <div className="col-sm-12 col-md-10 col-lg-8 mx-auto text-center rounded border my-2">
                         <div className="row">
-                            <div className="col-3">
+                            <div className="col-md-3">
                                 <label style={{fontWeight:"bold"}}>Order Status : </label>
                             </div>
-                            <div className="col-2">
+                            <div className="col-md-2">
                                 <label style={{fontWeight:"bold"}}>{orderPlaced.status}</label>
                             </div>
-                            <div className="col-1"></div>
-                            <div className="col-3">
+                            <div className="col-md-1"></div>
+                            <div className="col-md-3">
                                 <label style={{fontWeight:"bold"}}>Transaction ID : </label>
                             </div>
-                            <div className="col-2">
+                            <div className="col-md-2">
                                 <label style={{fontWeight:"bold"}}>{orderPlaced.transactionId}</label>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-3">
+                            <div className="col-md-3">
                                 <label style={{fontWeight:"bold"}}>Order Amount : </label>
                             </div>
-                            <div className="col-2">
+                            <div className="col-md-2">
                                 <label style={{fontWeight:"bold"}}>Rs.{orderPlaced.amount}</label>
                             </div>
-                            <div className="col-1"></div>
-                            <div className="col-3">
+                            <div className="col-md-1"></div>
+                            <div className="col-md-3">
                                 <label style={{fontWeight:"bold"}}>Order Date : </label>
                             </div>
-                            <div className="col-2">
+                            <div className="col-md-2">
                                 <label style={{fontWeight:"bold"}}>{new Date(new Date(orderPlaced.createdAt).getTime()).toLocaleDateString("en-us")}</label>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-3">
+                            <div className="col-md-3">
                                 <label style={{fontWeight:"bold"}}>Shipping Address : </label>
                             </div>
-                            <div className="col-4">
+                            <div className="col-md-4">
                                 <label style={{fontWeight:"bold"}}>{orderPlaced.address}</label>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ const UserOrders:FC<paymentSuccess>=({match})=>{
                             {orderPlaced.products.map((prd,index)=>{
                                 prd._id = prd.product
                                 return (
-                                    <div key={index}  className="col-4 mx-auto my-3">
+                                    <div key={index}  className="col-sm-12 col-md-6 col-lg-4 mx-auto my-3">
                                     <ProductCard product={prd} addToCart={false} removeFromCart={false} />
                                     </div>
                                 )   

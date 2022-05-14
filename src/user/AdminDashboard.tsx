@@ -54,10 +54,10 @@ const AdminDashboard = ()=>{
     return(
         <Base title="Admin Dashboard" description="Manage your store from here">
             <div className="row mx-3 bg-success p-4">
-                <div className="col-3">
+                <div className="col-md-4 col-lg-3">
                     {adminLeftSide()}
                 </div>
-                <div className="col-9">
+                <div className="col-md-8 col-lg-9">
                     {adminRightSide()}
                 </div>
             </div>

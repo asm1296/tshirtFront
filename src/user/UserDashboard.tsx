@@ -91,11 +91,11 @@ const UserDashboard = ()=>{
 
     return(
         <Base title="User Dashboard" description="Check your activity here">
-            <div className="row mx-3 p-4">
-                <div className="col-3">
+            <div className="row mx-lg-3 p-4">
+                <div className="col-md-4 col-lg-3">
                     {userLeftSide()}
                 </div>
-                <div className="col-9">
+                <div className="col-md-8 col-lg-9">
                     {userRightSide()}
                 </div>
             </div>
